@@ -30,7 +30,7 @@ Este diagrama representa el **modelo lógico**, adaptando la notación UML estri
 * **Integridad Referencial:** Especifica la ubicación exacta de las **Llaves Primarias (PK)** para identificar registros únicos, y las **Llaves Foráneas (FK)** para vincular las tablas (ej. `ID_Cliente` dentro de `Pedido`, o `ID_Proveedor` dentro de `Producto`).
 * **Multiplicidad:** Utiliza notación directa (1 a *) para indicar de qué lado de la relación se ubican los catálogos principales y de qué lado ocurren las transacciones o repeticiones.
 
-## 🏁 Conclusión
+##  Conclusión
 Este diseño establece una base de datos sólida, normalizada y escalable para la administración de mi florería.
 
 Paola Perez Cruz
