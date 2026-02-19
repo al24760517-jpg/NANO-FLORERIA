@@ -33,5 +33,4 @@ Este diagrama representa el **modelo lógico**, adaptando la notación UML estri
 ##  Conclusión
 Este diseño establece una base de datos sólida, normalizada y escalable para la administración de mi florería.
 
-Paola Perez Cruz
-Este diseño establece una base de datos sólida, normalizada y escalable para la administración de la florería. Más allá de modelar el negocio, este proyecto refleja la aplicación práctica de los principios de diseño relacional, sirviendo como una pieza fundamental para mi portafolio en el área de sistemas computacionales y sentando la estructura exacta necesaria para la futura programación y conexión con el software de la tienda.
+By: Paola Perez Cruz
