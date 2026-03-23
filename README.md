@@ -18,8 +18,11 @@ Este diagrama representa el **modelo conceptual** del negocio. Muestra visualmen
 
 ![Diagrama Entidad-Relación](diagramaER.jpg)
 
+
 * **Entidades Principales:** Se definieron 5 entidades clave: `Cliente`, `Pedido`, `Caracteristicas_pedido`, `Producto` y `Proveedor`.
 * **Resolución de Relaciones:** Destaca la creación de la entidad intermedia `Caracteristicas_pedido`, la cual es vital para desglosar la relación de *Muchos a Muchos* (N:M) entre los Pedidos y los Productos, permitiendo registrar la cantidad y el subtotal exacto de cada artículo vendido sin duplicar información.
+
+<img width="1117" height="432" alt="image" src="https://github.com/user-attachments/assets/ccd9c5dc-e28b-41ce-b8cf-6fd2d6458d60" />
 
 ### 2. Esquema Relacional (UML de Base de Datos)
 Este diagrama representa el **modelo lógico**, adaptando la notación UML estrictamente para el diseño de bases de datos (sin métodos ni visibilidad de Programación Orientada a Objetos). Es el plano directo para la codificación.
