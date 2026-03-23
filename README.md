@@ -24,6 +24,18 @@ Este diagrama representa el **modelo conceptual** del negocio. Muestra visualmen
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6878d105-4605-4092-820a-5fd3bf624f5b" />
 
+El diagrama fue mejorado pasando de un modelo sencillo tipo tablas a un diagrama Entidad-Relación más claro y organizado. Antes, la información estaba toda junta dentro de cada tabla, pero ahora se separan mejor las entidades, sus atributos y las relaciones entre ellas, lo que hace más fácil entender cómo funciona la base de datos.
+
+Uno de los cambios más importantes fue agregar nombres a las relaciones. Por ejemplo, ahora se puede ver que un cliente “hace” un pedido, un pedido “viene” con sus detalles, los detalles “contienen” productos y los proveedores “proveen” esos productos. Esto ayuda mucho a entender qué pasa entre cada elemento.
+
+También se mejoró cómo se muestran las relaciones de uno a muchos (1:N), ya que ahora están más claras y mejor ubicadas en el diagrama.
+
+En cuanto a la estructura, se mantuvo la tabla intermedia de características del pedido, que sirve para conectar pedidos con productos. Esto es importante porque evita repetir información y ayuda a que la base de datos esté bien organizada (normalizada).
+
+Además, los atributos ahora están separados y se ven de forma individual, lo que hace el diagrama más limpio. Incluso se agregaron algunos detalles como la dirección del cliente para hacerlo más completo.
+
+En general, el nuevo diagrama es más claro, más ordenado y más fácil de entender, además de que está mejor diseñado para una base de datos bien estructurada.
+
 
 ### 2. Esquema Relacional (UML de Base de Datos)
 Este diagrama representa el **modelo lógico**, adaptando la notación UML estrictamente para el diseño de bases de datos (sin métodos ni visibilidad de Programación Orientada a Objetos). Es el plano directo para la codificación.
