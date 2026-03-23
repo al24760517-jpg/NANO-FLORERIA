@@ -30,7 +30,68 @@ Este diagrama representa el **modelo lógico**, adaptando la notación UML estri
 * **Integridad Referencial:** Especifica la ubicación exacta de las **Llaves Primarias (PK)** para identificar registros únicos, y las **Llaves Foráneas (FK)** para vincular las tablas (ej. `ID_Cliente` dentro de `Pedido`, o `ID_Proveedor` dentro de `Producto`).
 * **Multiplicidad:** Utiliza notación directa (1 a *) para indicar de qué lado de la relación se ubican los catálogos principales y de qué lado ocurren las transacciones o repeticiones.
 
-  
+  ## 📘 Diccionario de Datos
+
+A continuación se describen las tablas que forman parte de la base de datos, junto con sus campos y su función dentro del sistema.
+
+---
+
+### 🔹 Cliente
+
+| Campo | Tipo | Descripción |
+|------|------|------------|
+| ID_Cliente | INT (PK) | Identificador único de cada cliente |
+| Nombre | VARCHAR(100) | Nombre del cliente |
+| Telefono | VARCHAR(20) | Número de teléfono |
+| Correo_Electronico | VARCHAR(100) | Correo electrónico |
+
+---
+
+### 🔹 Pedido
+
+| Campo | Tipo | Descripción |
+|------|------|------------|
+| ID_Pedido | INT (PK) | Identificador único del pedido |
+| Fecha_Hora | DATETIME | Fecha y hora en que se realizó |
+| Estado | VARCHAR(50) | Estado actual del pedido |
+| Total | DECIMAL(10,2) | Total a pagar |
+| ID_Cliente | INT (FK) | Cliente que hizo el pedido |
+
+---
+
+### Producto
+
+| Campo | Tipo | Descripción |
+|------|------|------------|
+| ID_Producto | INT (PK) | Identificador del producto |
+| Nombre | VARCHAR(100) | Nombre del producto |
+| Categoria | VARCHAR(50) | Tipo o categoría |
+| Precio_Venta | DECIMAL(10,2) | Precio por unidad |
+| Stock_Disponible | INT | Cantidad disponible |
+| ID_Proveedor | INT (FK) | Proveedor del producto |
+
+---
+
+### Proveedor
+
+| Campo | Tipo | Descripción |
+|------|------|------------|
+| ID_Proveedor | INT (PK) | Identificador del proveedor |
+| Nombre_Empresa | VARCHAR(100) | Nombre de la empresa |
+| Contacto | VARCHAR(100) | Persona de contacto |
+| Telefono | VARCHAR(20) | Teléfono |
+
+---
+
+###  Caracteristicas_Pedido
+
+| Campo | Tipo | Descripción |
+|------|------|------------|
+| ID_Detalle | INT (PK) | Identificador del detalle |
+| ID_Pedido | INT (FK) | Pedido al que pertenece |
+| ID_Producto | INT (FK) | Producto incluido |
+| Cantidad | INT | Número de unidades |
+| Subtotal | DECIMAL(10,2) | Resultado de cantidad por precio |
 
 ##  Conclusión
 Este diseño establece una base de datos sólida, normalizada y escalable para la administración de mi florería.
