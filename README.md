@@ -46,6 +46,11 @@ Este diagrama representa el **modelo lógico**, adaptando la notación UML estri
 * **Integridad Referencial:** Especifica la ubicación exacta de las **Llaves Primarias (PK)** para identificar registros únicos, y las **Llaves Foráneas (FK)** para vincular las tablas (ej. `ID_Cliente` dentro de `Pedido`, o `ID_Proveedor` dentro de `Producto`).
 * **Multiplicidad:** Utiliza notación directa (1 a *) para indicar de qué lado de la relación se ubican los catálogos principales y de qué lado ocurren las transacciones o repeticiones.
 
+El diseño actual ya cumple con la Tercera Forma Normal (3FN) por las siguientes razones:
+1. Cumplimiento de la 1FN (Atomicidad): Cada campo contiene un solo dato (no hay listas de productos dentro de una sola celda). La tabla CARACTERISTICAS_PEDIDO separa cada artículo individualmente, eliminando grupos repetidos.
+2. Cumplimiento de la 2FN (Dependencia Funcional): Todos los atributos de las tablas dependen por completo de su llave primaria. Por ejemplo, en CLIENTE, el teléfono y la dirección pertenecen a ese cliente específico y no a una parte de la llave.
+3. Cumplimiento de la 3FN (Eliminación de Dependencias Transitivas): No hay campos que dependan de otros campos que no sean la llave.
+
   ## Diccionario de Datos
 
 A continuación se describen las tablas que forman parte de la base de datos, junto con sus campos y su función dentro del sistema.
