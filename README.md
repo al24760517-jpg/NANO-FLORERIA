@@ -17,7 +17,51 @@ Para el diseño de esta arquitectura, se elaboraron dos diagramas que representa
 Este diagrama representa el **modelo conceptual** del negocio. Muestra visualmente cómo interactúan los actores principales de la florería sin entrar en detalles técnicos de programación. 
 
 ![Diagrama Entidad-Relación](diagramaER.jpg)
+erDiagram
 
+CLIENTE {
+    INT ID_Cliente PK
+    VARCHAR Nombre
+    VARCHAR Telefono
+    VARCHAR Correo_Electronico
+}
+
+PEDIDO {
+    INT ID_Pedido PK
+    DATETIME Fecha_Hora
+    VARCHAR Estado
+    DECIMAL Total
+    INT ID_Cliente FK
+}
+
+PRODUCTO {
+    INT ID_Producto PK
+    VARCHAR Nombre
+    VARCHAR Categoria
+    DECIMAL Precio_Venta
+    INT Stock_Disponible
+    INT ID_Proveedor FK
+}
+
+PROVEEDOR {
+    INT ID_Proveedor PK
+    VARCHAR Nombre_Empresa
+    VARCHAR Contacto
+    VARCHAR Telefono
+}
+
+CARACTERISTICAS_PEDIDO {
+    INT ID_Detalle PK
+    INT ID_Pedido FK
+    INT ID_Producto FK
+    INT Cantidad
+    DECIMAL Subtotal
+}
+
+CLIENTE ||--o{ PEDIDO : realiza
+PEDIDO ||--o{ CARACTERISTICAS_PEDIDO : contiene
+PRODUCTO ||--o{ CARACTERISTICAS_PEDIDO : incluye
+PROVEEDOR ||--o{ PRODUCTO : suministra
 * **Entidades Principales:** Se definieron 5 entidades clave: `Cliente`, `Pedido`, `Caracteristicas_pedido`, `Producto` y `Proveedor`.
 * **Resolución de Relaciones:** Destaca la creación de la entidad intermedia `Caracteristicas_pedido`, la cual es vital para desglosar la relación de *Muchos a Muchos* (N:M) entre los Pedidos y los Productos, permitiendo registrar la cantidad y el subtotal exacto de cada artículo vendido sin duplicar información.
 
