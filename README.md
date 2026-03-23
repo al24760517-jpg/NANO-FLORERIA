@@ -30,13 +30,13 @@ Este diagrama representa el **modelo lógico**, adaptando la notación UML estri
 * **Integridad Referencial:** Especifica la ubicación exacta de las **Llaves Primarias (PK)** para identificar registros únicos, y las **Llaves Foráneas (FK)** para vincular las tablas (ej. `ID_Cliente` dentro de `Pedido`, o `ID_Proveedor` dentro de `Producto`).
 * **Multiplicidad:** Utiliza notación directa (1 a *) para indicar de qué lado de la relación se ubican los catálogos principales y de qué lado ocurren las transacciones o repeticiones.
 
-  ## 📘 Diccionario de Datos
+  ## Diccionario de Datos
 
 A continuación se describen las tablas que forman parte de la base de datos, junto con sus campos y su función dentro del sistema.
 
 ---
 
-### 🔹 Cliente
+### Cliente
 
 | Campo | Tipo | Descripción |
 |------|------|------------|
@@ -47,7 +47,7 @@ A continuación se describen las tablas que forman parte de la base de datos, ju
 
 ---
 
-### 🔹 Pedido
+### Pedido
 
 | Campo | Tipo | Descripción |
 |------|------|------------|
